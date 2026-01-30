@@ -731,28 +731,32 @@ const App = () => {
         </section>
 
         {/* References Section */}
-        <section id="references" className={`rounded-[4.5rem] p-12 border scroll-mt-28 transition-all hover:shadow-2xl ${themeClasses.card}`}>
-          <div className="flex items-center gap-6 mb-12">
-            <h2 className="text-3xl font-black tracking-tighter uppercase italic heading-manrope">References</h2>
+        <section id="references" className={`rounded-[2.5rem] md:rounded-[4.5rem] p-6 md:p-12 border scroll-mt-28 transition-all hover:shadow-2xl ${themeClasses.card}`}>
+          <div className="flex items-center gap-4 md:gap-6 mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-black tracking-tighter uppercase italic heading-manrope">References</h2>
             <div className={`h-px flex-1 opacity-30 ${theme === 'dark' ? 'bg-slate-800' : 'bg-slate-300'}`}></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {references.map((r, i) => (
-              <div key={i} className={`p-10 rounded-[3rem] border transition-all hover:scale-[1.02] shadow-sm ${themeClasses.cardAlt} ${themeClasses.border}`}>
-                <div className="flex items-center gap-5 text-blue-600 mb-8">
-                  <div className="p-4 bg-blue-600 text-white rounded-2xl shadow-lg shadow-blue-500/20"><UserCheck size={32} /></div>
-                  <div>
-                    <h4 className="text-2xl font-black tracking-tight">{r.name}</h4>
-                    <p className={`text-sm font-bold ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>{r.role}</p>
+              <div key={i} className={`p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border transition-all hover:scale-[1.01] shadow-sm ${themeClasses.cardAlt} ${themeClasses.border}`}>
+                <div className="flex items-start gap-4 md:gap-5 text-blue-600 mb-6 md:mb-8">
+                  <div className="p-3 md:p-4 bg-blue-600 text-white rounded-xl md:rounded-2xl shadow-lg shadow-blue-500/20 shrink-0">
+                    <UserCheck size={28} className="md:w-8 md:h-8" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-lg md:text-2xl font-black tracking-tight truncate sm:whitespace-normal">{r.name}</h4>
+                    <p className={`text-xs md:text-sm font-bold leading-tight ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'}`}>{r.role}</p>
                     <p className="text-[11px] text-blue-600 font-black uppercase tracking-[0.2em] mt-1">{r.company}</p>
                   </div>
                 </div>
-                <div className="space-y-3">
-                  <div className={`flex items-center gap-3 text-sm font-mono p-3 rounded-xl border border-transparent hover:border-blue-500/20 hover:bg-blue-500/5 transition-all ${themeClasses.textMuted}`}>
-                    <Mail size={16} className="text-blue-600" /> {r.email}
+                <div className="space-y-2 md:space-y-3">
+                  <div className={`flex items-center gap-3 text-xs md:text-sm font-mono p-3 rounded-xl border border-transparent hover:border-blue-500/20 hover:bg-blue-500/5 transition-all ${themeClasses.textMuted} overflow-hidden`}>
+                    <Mail size={16} className="text-blue-600 shrink-0" />
+                    <span className="truncate">{r.email}</span>
                   </div>
-                  <div className={`flex items-center gap-3 text-sm font-mono p-3 rounded-xl border border-transparent hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all ${themeClasses.textMuted}`}>
-                    <Smartphone size={16} className="text-emerald-600" /> {r.phone}
+                  <div className={`flex items-center gap-3 text-xs md:text-sm font-mono p-3 rounded-xl border border-transparent hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all ${themeClasses.textMuted}`}>
+                    <Smartphone size={16} className="text-emerald-600 shrink-0" />
+                    <span>{r.phone}</span>
                   </div>
                 </div>
               </div>
