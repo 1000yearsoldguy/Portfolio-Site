@@ -1,10 +1,10 @@
 # Portfolio Project
 
-This is your personal portfolio website built with React, Vite, and Tailwind CSS.
+This is my personal portfolio website built with React, Vite, and Tailwind CSS.
 
 ## How to Launch (Run Locally)
 
-1.  **Open a Terminal**: You can use PowerShell, Command Prompt, or the terminal in VS Code.
+1.  **Open a Terminal**: We can use PowerShell, Command Prompt, or the terminal in VS Code.
 2.  **Navigate to the folder**:
     ```bash
     cd "c:\Users\Nafiz\Desktop\portfolio\second"
@@ -14,11 +14,11 @@ This is your personal portfolio website built with React, Vite, and Tailwind CSS
     npm run dev
     ```
 4.  **Open in Browser**:
-    Click the link shown in the terminal (usually `http://localhost:5173/`) or type it into your browser.
+    Click the link shown in the terminal (usually `http://localhost:5173/`) or type it into the browser.
 
 ## Other Commands
 
--   **Install Dependencies** (if you move the project to a new computer):
+-   **Install Dependencies** (if we move the project to a new computer):
     ```bash
     npm install
     ```
