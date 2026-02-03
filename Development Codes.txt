@@ -51,7 +51,7 @@ const App = () => {
     linkedin: "https://www.linkedin.com/in/gmnafiz/",
     github: "https://github.com/1000yearsoldguy",
     // REPLACE '#' WITH YOUR ACTUAL PDF URL (e.g., "https://yourdomain.com/resume.pdf" or a Google Drive direct link)
-    resumeLink: "https://drive.google.com/file/d/10VpPrsaLKS3bS3SIasDaHF8PR4w70Xjn/view?usp=sharing.pdf", 
+    resumeLink: "https://drive.google.com/file/d/1mVyg29BtnczG-HLi1b6w-rrG1zJa0y5y/view?usp=sharing", 
     profilePicture: "https://i.ibb.co.com/9kMsTjZL/nafiz.jpg",
     objective: "A Computer Science & Engineering graduate and Data Science major with 3+ years of experience bridging technical engineering and operational leadership. Expert in Python, SQL, and BI tools, specializing in predictive modeling and revenue protection. A proactive, high-energy problem solver committed to continuous learning and delivering scalable, data-driven solutions through technical rigor and dynamic, innovative leadership."
   };
