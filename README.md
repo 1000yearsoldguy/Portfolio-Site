@@ -5,9 +5,9 @@ This is my personal portfolio website built with React, Vite, and Tailwind CSS.
 ## How to Launch (Run Locally)
 
 1.  **Open a Terminal**: We can use PowerShell, Command Prompt, or the terminal in VS Code.
-2.  **Navigate to the folder**:
+2.  **Navigate to the folder or local repository**:
     ```bash
-    cd "c:\Users\USER\Desktop\portfolio\" <!-- Local Repository Location -->
+    cd "c:\Users\USER\Desktop\portfolio\"
     ```
 3.  **Start the Development Server**:
     ```bash
