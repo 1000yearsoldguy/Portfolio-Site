@@ -266,18 +266,18 @@ const App = () => {
 
   const references = [
     {
-      name: "Md Tanzil Shahrin",
-      role: "Assistant Manager, Central Process Calibration",
+      name: "Fariha Ahmed",
+      role: "Senior Manager, Customer Insights & Experience (Projects)",
       company: "foodpanda, Bangladesh",
-      email: "tanzil.shahrin95@gmail.com",
-      phone: "+8801840439136"
+      email: "fariharvp@gmail.com",
+      phone: "+8801798145065 "
     },
     {
-      name: "Md Abid Hossain",
-      role: "Lecturer, Dept. of CSE",
-      company: "United International University (UIU)",
-      email: "abid@cse.uiu.ac.bd",
-      phone: "+880196992356"
+      name: "Dr. Salekul Islam",
+      role: "Professor, Department of Electrical and Computer Engineering (ECE)",
+      company: "North South University (NSU)",
+      email: "salekul.islam@northsouth.edu",
+      phone: "+8801820182777 "
     }
   ];
 
