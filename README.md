@@ -7,7 +7,7 @@ This is my personal portfolio website built with React, Vite, and Tailwind CSS.
 1.  **Open a Terminal**: We can use PowerShell, Command Prompt, or the terminal in VS Code.
 2.  **Navigate to the folder**:
     ```bash
-    cd "c:\Users\Nafiz\Desktop\portfolio\second"
+    cd "c:\Users\USER\Desktop\portfolio\" <!-- Local Repository Location -->
     ```
 3.  **Start the Development Server**:
     ```bash
