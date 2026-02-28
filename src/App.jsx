@@ -485,15 +485,16 @@ const App = () => {
                   <span className={theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}>{personalInfo.email}</span>
                   {copiedEmail ? <Check size={16} className="text-emerald-500" /> : <Copy size={14} className="text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />}
                 </button>
-
-                <button
+                
+                {/* Uncomment this button to display the phone number */}
+                {/* <button
                   onClick={() => handleCopyText(personalInfo.phone, 'phone')}
                   className={`group relative flex items-center gap-3 border px-5 py-3 rounded-2xl font-mono text-xs transition-all active:scale-95 shadow-lg ${themeClasses.card} hover:border-emerald-500/50 hover:bg-emerald-500/5 min-w-[180px] hover:-translate-y-1 ${isHighlighting ? 'contact-highlight' : ''}`}
                 >
                   <Phone size={16} className={`${isHighlighting ? 'text-red-500' : 'text-emerald-500'} shrink-0 group-hover:animate-pulse`} />
                   <span className={theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}>{personalInfo.phone}</span>
                   {copiedPhone ? <Check size={16} className="text-emerald-500" /> : <Copy size={14} className="text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />}
-                </button>
+                </button> */}
 
                 <a
                   href={personalInfo.resumeLink}
