@@ -260,7 +260,7 @@ const App = () => {
     { role: "Former President", org: "Dhaka Imperial College Science Club (DICSC)", period: "2019", desc: "Worked on administration, outreach, fundraising, awareness, and research." },
     { role: "Senior Executive", org: "Dhaka Imperial College Science Club (DICSC)", period: "2017-2018", desc: "Worked on research-based science projects along with design and implementation." },
     { role: "Head of Network Administration", org: "Dhaka Imperial College Business Club (DICBC) & Humanities Club (DICHC)", period: "2018-2019", desc: "Worked on proposals, sponsorships and goals for targeted outcomes." },
-    { role: "Head Administrative Officer", org: "Bangladesh Association of Science (BAS) Science Olympiad", period: "2018", desc: "Administrative operations leadership." },
+    { role: "Head Administrative Officer", org: "Bangladesh Academy of Sciences (BAS) Science Olympiad", period: "2018", desc: "Administrative operations leadership." },
     { role: "Chief Project Recruiter", org: "Viqarunnisa Noon Science Festival", period: "2018", desc: "Project recruitment leadership." }
   ];
 
