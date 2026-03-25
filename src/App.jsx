@@ -257,7 +257,7 @@ const App = () => {
   ];
 
   const leadership = [
-    { role: "Former President", org: "Dhaka Imperial College Science Club (DICSC)", period: "2019", desc: "Worked on administration, outreach, fundraising, awareness, and research." },
+    { role: "President", org: "Dhaka Imperial College Science Club (DICSC)", period: "2019", desc: "Worked on administration, outreach, fundraising, awareness, and research." },
     { role: "Senior Executive", org: "Dhaka Imperial College Science Club (DICSC)", period: "2017-2018", desc: "Worked on research-based science projects along with design and implementation." },
     { role: "Head of Network Administration", org: "Dhaka Imperial College Business Club (DICBC) & Humanities Club (DICHC)", period: "2018-2019", desc: "Worked on proposals, sponsorships and goals for targeted outcomes." },
     { role: "Head Administrative Officer", org: "Bangladesh Academy of Sciences (BAS) Science Olympiad", period: "2018", desc: "Administrative operations leadership." },
@@ -485,7 +485,7 @@ const App = () => {
                   <span className={theme === 'dark' ? 'text-slate-200' : 'text-slate-700'}>{personalInfo.email}</span>
                   {copiedEmail ? <Check size={16} className="text-emerald-500" /> : <Copy size={14} className="text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />}
                 </button>
-                
+
                 {/* Uncomment this button to display the phone number */}
                 {/* <button
                   onClick={() => handleCopyText(personalInfo.phone, 'phone')}
