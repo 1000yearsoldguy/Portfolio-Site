@@ -156,21 +156,32 @@ revealCSS.textContent = `
       transform: translateY(-2px);
     }
 
-    /* Honor card lift */
-    .honor-card { transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s; }
-    .honor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    /* Honor card lift - PREMIUM SMOOTH TRANSITION */
+    .honor-card { 
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+                  box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+                  border-color 0.4s ease,
+                  background 0.4s ease; 
+    }
+    .honor-card:hover { 
+      transform: translateY(-8px) scale(1.015); 
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(240, 192, 64, 0.12);
+      border-color: var(--gold) !important;
+      background: var(--surface2);
+    }
 
     /* Exp item hover shadow */
-    .exp-item { transition: border-color 0.3s, box-shadow 0.3s; }
-    .exp-item:hover { box-shadow: var(--shadow-md); }
+    .exp-item { transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease, border-color 0.4s ease; }
+    .exp-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent) !important; }
 
     /* Conf item hover */
-    .conf-item { transition: background 0.2s, border-color 0.2s; }
-    .conf-item:hover { background: var(--surface2) !important; border-color: var(--accent) !important; }
+    .conf-item { transition: all 0.3s ease; }
+    .conf-item:hover { background: var(--surface2) !important; border-color: var(--accent) !important; transform: translateX(4px); }
 
     /* Cert badge hover */
-    a.cert-badge { transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s; }
-    a.cert-badge:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    a.cert-badge { transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+    a.cert-badge:hover { transform: translateY(-3px) scale(1.02); box-shadow: var(--shadow-sm); }
+
 
     /* Rec card lift */
     .rec-card { transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s; }
@@ -207,10 +218,13 @@ revealCSS.textContent = `
     box-shadow: 0 0 8px rgba(0, 200, 240, 0.5);
   }
 
+    /* Reset delays once visible so hover is snappy */
+    .visible { transition-delay: 0s !important; }
+
     /* Card tilt effect */
     .tiltable { transform-style: preserve-3d; }
 
-    /* Stagger delays for honor cards */
+    /* Stagger delays for honor cards (entrance only) */
     .honors-grid .honor-card:nth-child(1) { transition-delay: 0s; }
     .honors-grid .honor-card:nth-child(2) { transition-delay: 0.07s; }
     .honors-grid .honor-card:nth-child(3) { transition-delay: 0.14s; }
@@ -219,6 +233,7 @@ revealCSS.textContent = `
     .honors-grid .honor-card:nth-child(6) { transition-delay: 0.35s; }
     .honors-grid .honor-card:nth-child(7) { transition-delay: 0.42s; }
     .honors-grid .honor-card:nth-child(8) { transition-delay: 0.49s; }
+
 
     /* Lang card hover */
     .lang-card { transition: border-color 0.2s, box-shadow 0.2s; }

@@ -957,7 +957,7 @@ h2.section-title {
   border-radius: var(--radius);
   padding: 2rem;
   position: relative;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -965,7 +965,6 @@ h2.section-title {
 
 .honor-card:hover {
   border-color: var(--gold);
-  box-shadow: var(--shadow-md);
 }
 
 .honor-issuer {
@@ -1442,6 +1441,11 @@ h1.hero-name {
 
   .nav-links {
     display: none !important;
+  }
+
+  .nav-controls {
+    flex: 1;
+    justify-content: space-between;
   }
 
   .nav-toggle {
