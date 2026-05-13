@@ -178,9 +178,6 @@ revealCSS.textContent = `
     .conf-item { transition: all 0.3s ease; }
     .conf-item:hover { background: var(--surface2) !important; border-color: var(--accent) !important; transform: translateX(4px); }
 
-    /* Cert badge hover */
-    a.cert-badge { transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
-    a.cert-badge:hover { transform: translateY(-3px) scale(1.02); box-shadow: var(--shadow-sm); }
 
 
     /* Rec card lift */
