@@ -63,10 +63,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
-[data-theme="light"] .nav-links {
-  background: rgba(240, 244, 248, 0.98);
-}
-
 /* ── THEME TOGGLE ── */
 .theme-toggle {
   display: flex;

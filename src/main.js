@@ -344,45 +344,6 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
   revealObserver.observe(el);
 });
 
-// // ── ANIMATED COUNTERS ──
-// function animateCounter(el, target, duration = 1400, isDecimal = false) {
-//   const start = performance.now();
-//   const startVal = 0;
-//   function step(now) {
-//     const progress = Math.min((now - start) / duration, 1);
-//     const eased = 1 - Math.pow(1 - progress, 3);
-//     const val = startVal + (target - startVal) * eased;
-//     el.textContent = isDecimal ? val.toFixed(2) : Math.round(val) + (el.dataset.suffix || '');
-//     if (progress < 1) requestAnimationFrame(step);
-//     else el.textContent = isDecimal ? target.toFixed(2) : target + (el.dataset.suffix || '');
-//   }
-//   requestAnimationFrame(step);
-// }
-
-// const statEls = document.querySelectorAll('.stat-num');
-// let statsAnimated = false;
-// // Calculate years since August 22, 2022
-// const startDate = new Date('2022-08-22');
-// const today = new Date();
-// // Calculate difference in years (ms / ms_per_year)
-// const diffInYears = (today - startDate) / (1000 * 60 * 60 * 24 * 365.25);
-// const yearsExperience = parseFloat(diffInYears.toFixed(1)); // One decimal place, e.g., "3.7"
-// const statsObserver = new IntersectionObserver(entries => {
-//   if (entries[0].isIntersecting && !statsAnimated) {
-//     statsAnimated = true;
-//     const data = [
-//       { el: statEls[0], val: yearsExperience, suffix: '+' },
-//       { el: statEls[1], val: 40, suffix: '%' },
-//       { el: statEls[2], val: 1, suffix: 'st' },
-//       { el: statEls[3], val: 5, suffix: 'th' },
-//     ];
-//     data.forEach(({ el, val, suffix }) => {
-//       if (el) { el.dataset.suffix = suffix; animateCounter(el, val, 1400); }
-//     });
-//   }
-// }, { threshold: 0.5 });
-// if (statEls[0]) statsObserver.observe(statEls[0].closest('.hero-stats') || statEls[0]);
-
 // ── SMOOTH ANIMATED COUNTER ENGINE ──
 function animateCounter(el, target, duration = 1600) {
   const startTime = performance.now();
