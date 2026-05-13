@@ -1003,7 +1003,8 @@ h2.section-title {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: visible;
+  /* Allow tooltips to be visible outside group */
 }
 
 .cert-group-header {
@@ -1015,6 +1016,8 @@ h2.section-title {
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
   gap: 0.5rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  /* Maintain rounded corners without overflow:hidden */
 }
 
 .cert-group-issuer {
@@ -1057,6 +1060,7 @@ h2.section-title {
 
 a.cert-badge {
   cursor: pointer;
+  position: relative;
 }
 
 a.cert-badge:hover {
@@ -1064,6 +1068,55 @@ a.cert-badge:hover {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
+}
+
+/* Tooltip */
+a.cert-badge::after {
+  content: 'Click to verify this credential';
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--surface3);
+  color: var(--text);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.62rem;
+  font-family: 'DM Mono', monospace;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-strong);
+  pointer-events: none;
+  z-index: 1000;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Tooltip Arrow */
+a.cert-badge::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--border-strong) transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+a.cert-badge:hover::after,
+a.cert-badge:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .cert-link-icon {
