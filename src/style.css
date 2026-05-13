@@ -1041,7 +1041,6 @@ h2.section-title {
 }
 
 .cert-badge {
-  position: relative;
   font-size: 0.72rem;
   color: var(--text-secondary);
   background: var(--surface2);
@@ -1055,53 +1054,6 @@ h2.section-title {
   gap: 0.35rem;
   cursor: default;
 }
-
-.cert-badge::after {
-  content: 'Click to verify this credential';
-  position: absolute;
-  bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  background: var(--surface3);
-  color: var(--accent);
-  padding: 0.45rem 0.9rem;
-  border-radius: 6px;
-  font-size: 0.62rem;
-  font-family: 'DM Mono', monospace;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
-  pointer-events: none;
-  border: 1px solid var(--accent-dim);
-  box-shadow: var(--shadow-lg);
-  z-index: 100;
-  letter-spacing: 0.02em;
-  text-transform: none;
-}
-
-.cert-badge::before {
-  content: '';
-  position: absolute;
-  bottom: 115%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  border: 6px solid transparent;
-  border-top-color: var(--surface3);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
-  pointer-events: none;
-  z-index: 100;
-}
-
-.cert-badge:hover::after,
-.cert-badge:hover::before {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
 
 a.cert-badge {
   cursor: pointer;
