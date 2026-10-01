@@ -737,8 +737,11 @@ h2.section-title {
   background: var(--surface2);
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-sm);
-  white-space: nowrap;
   border: 1px solid var(--border);
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .exp-dept {
